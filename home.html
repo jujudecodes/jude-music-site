@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ================== SEO ================== -->
+<title>JUDE | Official Music Artist — Pop Rock Cinématographique</title>
+<meta name="description" content="Site officiel de JUDE, artiste solo savoyarde — autrice-compositrice, productrice et réalisatrice. Pop rock cinématographique en anglais. Musique, clips, live sessions, discographie et dernières sorties.">
+<meta name="author" content="JUDE">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="canonical" href="https://jude-music.com/home.html">
+
+<!-- ================== Open Graph (partage réseaux) ================== -->
+<meta property="og:type" content="music.musician">
+<meta property="og:site_name" content="JUDE">
+<meta property="og:title" content="JUDE | Official Music Artist">
+<meta property="og:description" content="Pop rock cinématographique. Même sang, nouvelle peau. Musique, clips et live sessions de JUDE.">
+<meta property="og:url" content="https://jude-music.com/">
+<meta property="og:image" content="https://jude-music.com/assets/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="fr_FR">
+
+<!-- ================== Twitter / X ================== -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="JUDE | Official Music Artist">
+<meta name="twitter:description" content="Pop rock cinématographique. Même sang, nouvelle peau.">
+<meta name="twitter:image" content="https://jude-music.com/assets/og-cover.jpg">
+
+<!-- ================== Favicon ================== -->
+<link rel="icon" type="image/png" href="assets/favicon.png">
+
+<!-- ================== Fonts ================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,900;1,9..144,400;1,9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- ================== Schema.org — MusicGroup (rich results) ================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "JUDE",
+  "alternateName": "Jude's Ketchup",
+  "url": "https://jude-music.com",
+  "image": "https://jude-music.com/assets/og-cover.jpg",
+  "genre": ["Pop rock", "Alternative pop", "Cinematic pop"],
+  "description": "Artiste solo savoyarde — autrice-compositrice, productrice et réalisatrice. Pop rock cinématographique en anglais, entre Lady Gaga et girl in red.",
+  "foundingDate": "2026",
+  "foundingLocation": { "@type": "Place", "name": "Savoie, France" },
+  "sameAs": [
+    "https://www.instagram.com/jude_officialmusic/",
+    "https://www.youtube.com/channel/UCO5dWx7UNIUmN5-YJNAmWzg"
+  ]
+}
+</script>
+
+<style>
+/* ============================================================
+   JUDE — feuille de style
+   Direction : film noir · rouge sang · premium · cinématographique
+   Accent unique : --blood. Tout le reste reste silencieux.
+   ============================================================ */
+
+:root{
+  --bg:        #0A0A0B;
+  --bg-panel:  #101012;
+  --ink:       #ECE6DB;   /* blanc os, chaud */
+  --ink-dim:   #918A7F;   /* texte secondaire */
+  --ink-faint: #57534C;
+  --blood:     #B5141A;   /* rouge sang / ketchup */
+  --blood-hi:  #D81E25;   /* hover */
+  --line:      rgba(236,230,219,.12);
+  --line-soft: rgba(236,230,219,.06);
+
+  --display: "Fraunces", Georgia, serif;
+  --sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  --maxw: 1180px;
+  --pad: clamp(20px, 5vw, 64px);
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+
+html{ scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.65;
+  font-weight:400;
+  letter-spacing:.01em;
+  overflow-x:hidden;
+  position:relative;
+}
+
+/* Grain cinématographique discret, fixe, plein écran */
+body::after{
+  content:"";
+  position:fixed; inset:0;
+  pointer-events:none;
+  z-index:9999;
+  opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+img{ max-width:100%; display:block; }
+a{ color:inherit; text-decoration:none; }
+
+/* ---------- Typographie ---------- */
+h1,h2,h3{ font-family:var(--display); font-weight:600; line-height:1.02; letter-spacing:-.01em; }
+
+.eyebrow{
+  font-family:var(--sans);
+  font-size:12px;
+  font-weight:500;
+  letter-spacing:.34em;
+  text-transform:uppercase;
+  color:var(--ink-dim);
+}
+.eyebrow .num{ color:var(--blood); margin-right:.7em; }
+
+/* ---------- Layout ---------- */
+.wrap{ max-width:var(--maxw); margin-inline:auto; padding-inline:var(--pad); }
+
+section{ padding-block:clamp(72px,11vw,140px); position:relative; }
+section + section{ border-top:1px solid var(--line-soft); }
+
+.section-head{ margin-bottom:clamp(32px,5vw,56px); }
+.section-head h2{
+  font-size:clamp(34px,6vw,72px);
+  margin-top:.28em;
+  font-weight:600;
+}
+.section-head h2 em{ font-style:italic; color:var(--blood); }
+
+/* ====================================================
+   NAV
+   ==================================================== */
+header.nav{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px var(--pad);
+}
+.nav .mark{ display:inline-flex; align-items:center; }
+.nav .mark img{ height:30px; width:auto; display:block; }
+.nav nav{ display:flex; gap:30px; }
+.nav nav a{
+  font-size:12.5px; letter-spacing:.18em; text-transform:uppercase;
+  color:#fff; opacity:.8; transition:opacity .25s;
+}
+.nav nav a:hover{ opacity:1; }
+@media(max-width:760px){ .nav nav{ display:none; } }
+
+/* ====================================================
+   HERO
+   ==================================================== */
+.hero{
+  min-height:100svh;
+  display:flex; flex-direction:column; justify-content:flex-end;
+  padding-bottom:clamp(48px,8vw,88px);
+  position:relative; overflow:hidden;
+  border-top:none;
+}
+/* Emplacement photo : remplace le dégradé par une vraie image hero
+   en décommentant background-image ci-dessous. */
+.hero .bg{
+  position:absolute; inset:0; z-index:0;
+  background-image:
+    linear-gradient(180deg, rgba(7,7,8,.30) 0%, rgba(7,7,8,.55) 55%, rgba(7,7,8,.92) 100%),
+    url("assets/jude-photo.jpg");
+  background-size:cover; background-position:center 22%;
+}
+.hero .bg::after{ /* vignette douce */
+  content:""; position:absolute; inset:0;
+  background:radial-gradient(120% 100% at 50% 30%, transparent 55%, rgba(6,6,7,.5));
+}
+.hero .wrap{ position:relative; z-index:1; width:100%; }
+
+.hero .eyebrow{ margin-bottom:clamp(18px,3vw,26px); }
+.wordmark{
+  font-family:var(--display);
+  font-weight:900;
+  font-size:clamp(96px,30vw,360px);
+  line-height:.82;
+  letter-spacing:-.02em;
+  margin:0;
+}
+.wordmark img{ width:min(86vw,640px); height:auto; display:block; margin-left:-1vw; filter:drop-shadow(0 8px 40px rgba(0,0,0,.5)); }
+.hero .tag{
+  font-family:var(--display);
+  font-style:italic;
+  font-weight:400;
+  font-size:clamp(19px,2.6vw,30px);
+  color:var(--ink);
+  max-width:30ch;
+  margin-top:clamp(20px,3vw,30px);
+}
+.hero .tag .sep{ color:var(--blood); font-style:normal; }
+
+.cta-row{ display:flex; flex-wrap:wrap; gap:14px; margin-top:clamp(28px,4vw,40px); }
+
+.btn{
+  display:inline-flex; align-items:center; gap:.6em;
+  font-size:13px; letter-spacing:.16em; text-transform:uppercase; font-weight:500;
+  padding:15px 28px; border:1px solid var(--ink);
+  transition:.28s ease; cursor:pointer;
+}
+.btn:hover{ background:var(--ink); color:var(--bg); }
+.btn.blood{ background:var(--blood); border-color:var(--blood); color:#fff; }
+.btn.blood:hover{ background:var(--blood-hi); border-color:var(--blood-hi); color:#fff; }
+
+.scroll-cue{
+  position:absolute; bottom:24px; left:50%; transform:translateX(-50%);
+  z-index:2; font-size:11px; letter-spacing:.3em; text-transform:uppercase;
+  color:var(--ink-dim); writing-mode:vertical-rl;
+}
+
+/* ====================================================
+   BIO
+   ==================================================== */
+.bio-grid{ display:grid; grid-template-columns:1fr 1.1fr; gap:clamp(32px,6vw,80px); align-items:start; }
+@media(max-width:860px){ .bio-grid{ grid-template-columns:1fr; } }
+
+.bio-lead{
+  font-family:var(--display); font-weight:300;
+  font-size:clamp(24px,3.4vw,40px); line-height:1.22; letter-spacing:-.01em;
+}
+.bio-lead em{ font-style:italic; color:var(--blood); }
+.bio-body p{ color:var(--ink-dim); margin-bottom:1.1em; max-width:60ch; }
+.bio-body p strong{ color:var(--ink); font-weight:500; }
+.bio-meta{ margin-top:26px; display:flex; flex-wrap:wrap; gap:10px; }
+.chip{
+  font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-dim);
+  border:1px solid var(--line); padding:7px 14px;
+}
+
+/* ====================================================
+   DISCOGRAPHIE — tracklist
+   ==================================================== */
+.tracks{ border-top:1px solid var(--line); }
+.track{
+  display:grid; grid-template-columns:auto 1fr auto auto; gap:clamp(16px,3vw,40px);
+  align-items:center;
+  padding:clamp(20px,3vw,30px) 0;
+  border-bottom:1px solid var(--line);
+  transition:background .3s, padding-left .3s;
+}
+.track:hover{ background:linear-gradient(90deg, rgba(181,20,26,.06), transparent); padding-left:14px; }
+.track .idx{ font-family:var(--display); font-size:15px; color:var(--blood); width:2.4ch; }
+.track .ttl{ font-family:var(--display); font-size:clamp(22px,3.4vw,36px); font-weight:500; }
+.track .ttl span{ display:block; font-family:var(--sans); font-size:13px; letter-spacing:.04em; color:var(--ink-dim); text-transform:none; margin-top:4px; }
+.track .yr{ color:var(--ink-faint); font-size:14px; font-variant-numeric:tabular-nums; }
+.track .go{ font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--ink-dim); white-space:nowrap; }
+.track:hover .go{ color:var(--ink); }
+.track.upcoming .ttl{ color:var(--ink-dim); }
+.track.upcoming .yr{ color:var(--blood); }
+@media(max-width:680px){
+  .track{ grid-template-columns:auto 1fr; row-gap:6px; }
+  .track .yr,.track .go{ grid-column:2; }
+}
+
+/* ====================================================
+   VIDÉOS
+   ==================================================== */
+.vids{ display:grid; grid-template-columns:1.4fr 1fr; gap:clamp(16px,2.5vw,28px); }
+@media(max-width:860px){ .vids{ grid-template-columns:1fr; } }
+.vid{
+  position:relative; display:block; overflow:hidden;
+  aspect-ratio:16/9; background:var(--bg-panel);
+  border:1px solid var(--line);
+}
+.vid.tall{ grid-row:span 2; aspect-ratio:auto; }
+@media(max-width:860px){ .vid.tall{ grid-row:auto; aspect-ratio:16/9; } }
+.vid .ph{ /* miniature vidéo */
+  position:absolute; inset:0;
+  background-size:cover; background-position:center;
+  transition:transform .6s ease;
+}
+.vid .ph::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.62)); }
+.vid:hover .ph{ transform:scale(1.04); }
+.vid .label{ position:absolute; z-index:2; left:0; bottom:0; padding:20px; }
+.vid .label .k{ display:block; font-family:var(--display); font-size:clamp(20px,2.4vw,28px); font-weight:500; }
+.vid .label .s{ display:block; font-size:12px; letter-spacing:.16em; text-transform:uppercase; color:var(--ink-dim); margin-top:4px; }
+.vid .play{
+  position:absolute; z-index:2; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:60px; height:60px; border-radius:50%; border:1px solid var(--ink);
+  display:grid; place-items:center; transition:.3s;
+}
+.vid .play::after{ content:""; border-left:14px solid var(--ink); border-top:9px solid transparent; border-bottom:9px solid transparent; margin-left:4px; }
+.vid:hover .play{ background:var(--blood); border-color:var(--blood); }
+.vid:hover .play::after{ border-left-color:#fff; }
+
+/* ====================================================
+   ÉCOUTER — plateformes
+   ==================================================== */
+.platforms{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); }
+.platform{
+  background:var(--bg); padding:clamp(22px,3vw,30px);
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  transition:background .3s;
+}
+.platform:hover{ background:var(--bg-panel); }
+.platform .n{ font-family:var(--display); font-size:21px; font-weight:500; }
+.platform .arrow{ color:var(--blood); transition:transform .3s; }
+.platform:hover .arrow{ transform:translateX(5px); }
+
+/* ====================================================
+   MERCH
+   ==================================================== */
+.merch{ text-align:center; }
+.merch .big{
+  font-family:var(--display); font-weight:900;
+  font-size:clamp(48px,12vw,150px); line-height:.9; letter-spacing:-.02em;
+  color:transparent; -webkit-text-stroke:1px var(--ink-faint);
+  transition:.4s;
+}
+.merch a:hover .big{ color:var(--blood); -webkit-text-stroke:1px var(--blood); }
+.merch p{ color:var(--ink-dim); max-width:46ch; margin:22px auto 0; }
+
+/* ====================================================
+   CONTACT
+   ==================================================== */
+.contact-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
+@media(max-width:680px){ .contact-grid{ grid-template-columns:1fr; } }
+.cbox{ background:var(--bg); padding:clamp(26px,4vw,40px); }
+.cbox .role{ font-size:12px; letter-spacing:.2em; text-transform:uppercase; color:var(--blood); margin-bottom:10px; }
+.cbox a.mail{ font-family:var(--display); font-size:clamp(18px,2.4vw,24px); word-break:break-all; border-bottom:1px solid transparent; transition:.25s; }
+.cbox a.mail:hover{ border-color:var(--blood); }
+.cbox .d{ color:var(--ink-dim); font-size:14px; margin-top:8px; }
+
+/* ====================================================
+   FOOTER
+   ==================================================== */
+footer{ padding:clamp(48px,7vw,80px) 0 40px; border-top:1px solid var(--line); }
+.foot-top{ display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:30px; }
+.foot-mark{ font-family:var(--display); font-weight:900; font-size:clamp(60px,16vw,180px); line-height:.8; letter-spacing:-.02em; }
+.foot-mark img{ width:min(70vw,420px); height:auto; display:block; }
+.socials{ display:flex; gap:24px; }
+.socials a{ font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-dim); transition:color .25s; }
+.socials a:hover{ color:var(--blood); }
+.foot-bottom{ margin-top:48px; padding-top:24px; border-top:1px solid var(--line-soft);
+  display:flex; flex-wrap:wrap; justify-content:space-between; gap:14px;
+  font-size:12.5px; color:var(--ink-faint); letter-spacing:.04em; }
+.foot-bottom .credits span{ color:var(--ink-dim); }
+
+/* ---------- Reveal on scroll ---------- */
+.reveal{ opacity:0; transform:translateY(24px); transition:opacity .9s ease, transform .9s cubic-bezier(.2,.7,.2,1); }
+.reveal.in{ opacity:1; transform:none; }
+
+@media (prefers-reduced-motion: reduce){
+  *{ scroll-behavior:auto !important; }
+  .reveal{ opacity:1; transform:none; transition:none; }
+  body::after{ display:none; }
+}
+
+/* ====================================================
+   TOUR / DATES
+   ==================================================== */
+.dates{ border-top:1px solid var(--line); }
+.date-row{
+  display:grid; grid-template-columns:auto 1fr auto; gap:clamp(16px,3vw,40px);
+  align-items:center; padding:clamp(20px,3vw,28px) 0; border-bottom:1px solid var(--line);
+}
+.date-row .d{ font-family:var(--display); font-size:clamp(20px,2.6vw,30px); font-variant-numeric:tabular-nums; white-space:nowrap; }
+.date-row .v{ color:var(--ink-dim); }
+.date-row .v strong{ color:var(--ink); font-weight:500; font-family:var(--display); }
+.date-empty{ padding:clamp(28px,4vw,44px) 0; color:var(--ink-dim); }
+.date-empty .btn{ margin-top:20px; }
+
+/* ====================================================
+   NEWSLETTER (bande d'appel)
+   ==================================================== */
+.nl-band{ text-align:center; }
+.nl-band h2{ font-size:clamp(34px,6vw,72px); }
+.nl-band p{ color:var(--ink-dim); max-width:44ch; margin:18px auto 28px; }
+
+/* ====================================================
+   MODALE NEWSLETTER
+   ==================================================== */
+.modal-overlay{
+  position:fixed; inset:0; z-index:1000;
+  background:rgba(5,5,6,.82); backdrop-filter:blur(6px);
+  display:flex; align-items:center; justify-content:center; padding:24px;
+  opacity:0; visibility:hidden; transition:opacity .35s ease, visibility .35s;
+}
+.modal-overlay.open{ opacity:1; visibility:visible; }
+.modal{
+  position:relative; width:100%; max-width:440px;
+  background:#161618; border:1px solid var(--line);
+  padding:clamp(28px,5vw,44px); 
+  transform:translateY(16px) scale(.98); transition:transform .4s cubic-bezier(.2,.7,.2,1);
+}
+.modal-overlay.open .modal{ transform:none; }
+.modal-close{
+  position:absolute; top:14px; right:16px; background:none; border:none;
+  color:var(--ink-dim); font-size:26px; line-height:1; cursor:pointer; transition:color .25s;
+}
+.modal-close:hover{ color:var(--blood); }
+.modal-mark{ font-family:var(--display); font-weight:900; font-size:40px; letter-spacing:.04em; }
+.modal-mark img{ height:52px; width:auto; display:block; }
+.modal-sub{ color:var(--ink-dim); font-size:15px; margin:14px 0 22px; }
+
+/* --- Habillage du formulaire Kit (ConvertKit) --- */
+.modal .formkit-form{ background:transparent!important; border:none!important; max-width:none!important; overflow:visible!important; }
+.modal .formkit-background{ display:none!important; }
+.modal [data-style="minimal"]{ padding:0!important; }
+.modal .formkit-header, .modal .formkit-subheader{ display:none!important; }
+.modal .formkit-fields{ display:block!important; margin:0!important; }
+.modal .formkit-field{ min-width:0!important; margin:0 0 12px!important; }
+.modal .formkit-input{ width:100%!important; background:var(--ink)!important; color:#0A0A0B!important; border:none!important; border-radius:0!important; padding:13px 14px!important; font-family:var(--sans)!important; font-size:15px!important; }
+.modal .formkit-input::placeholder{ color:#6b6b6b!important; opacity:1!important; }
+.modal .formkit-submit{ width:100%!important; background:var(--blood)!important; border:none!important; border-radius:0!important; margin:4px 0 0!important; }
+.modal .formkit-submit:hover{ background:var(--blood-hi)!important; }
+.modal .formkit-submit > span{ display:block!important; padding:15px 24px!important; font-size:12.5px!important; letter-spacing:.16em!important; text-transform:uppercase!important; font-weight:500!important; }
+.modal .formkit-guarantee{ color:var(--ink-dim)!important; font-size:12px!important; text-align:left!important; margin:14px 0 0!important; }
+.modal .formkit-guarantee p{ margin:0!important; }
+.modal .formkit-alert{ margin:0 0 12px!important; border-radius:0!important; font-size:13px!important; }
+.modal .formkit-powered-by-convertkit-container{ margin:14px 0 0!important; justify-content:flex-start!important; }
+
+a:focus-visible, .btn:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible{ outline:2px solid var(--blood); outline-offset:3px; }
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAV ================= -->
+<header class="nav">
+  <a href="#top" class="mark"><img src="assets/logo.png" alt="JUDE"></a>
+  <nav>
+    <a href="#bio">À propos</a>
+    <a href="#music">Musique</a>
+    <a href="#listen">Écouter</a>
+    <a href="#" data-nl>Newsletter</a>
+    <a href="#contact">Booking</a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="bg"></div>
+  <div class="wrap">
+    <p class="eyebrow">Autrice · Compositrice · Réalisatrice</p>
+    <h1 class="wordmark"><img src="assets/logo.png" alt="JUDE"></h1>
+    <p class="tag">Pop rock cinématographique. <span class="sep">—</span> Même sang, nouvelle peau.</p>
+    <div class="cta-row">
+      <a href="#listen" class="btn blood">Écouter</a>
+      <a href="#contact" class="btn">Booking</a>
+    </div>
+  </div>
+  <span class="scroll-cue">Scroll</span>
+</section>
+
+<!-- ================= BIO ================= -->
+<section id="bio" class="reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow"><span class="num">01</span>À propos</p>
+      <h2>Femme fatale <em>décalée</em></h2>
+    </div>
+    <div class="bio-grid">
+      <p class="bio-lead">Quelque part entre <em>Lady Gaga</em> et <em>girl in red</em> — film noir, rouge sang, humour acéré.</p>
+      <div class="bio-body">
+        <p>JUDE est une artiste solo originaire de <strong>Savoie</strong>. Chanteuse, guitariste, autrice-compositrice, productrice et réalisatrice, elle construit son projet de façon entièrement indépendante depuis plusieurs années — d'abord sous le nom de scène Jude's Ketchup, puis sous son prénom seul, <strong>JUDE</strong>, à partir de 2026, marquant le début d'une nouvelle ère artistique plus affirmée.</p>
+        <p>Sa musique est une pop rock émotionnelle en anglais, portée par une voix centrale puissante et des productions organiques aux textures soignées. Son univers visuel et sonore s'articule autour d'une esthétique cinématographique assumée — femme fatale à l'humour acéré, audacieuse, libre, bruyante quand il le faut.</p>
+        <p>Son premier EP explore plusieurs directions — pop-punk avec <strong>I AM!</strong>, pop cinématographique avec <strong>Bain Rouge</strong>, pop-rock sauvage avec <strong>Evergreen</strong> — posant les bases d'une identité claire : une pop accessible en surface, dense et personnelle en profondeur.</p>
+        <div class="bio-meta">
+          <span class="chip">Savoie · France</span>
+          <span class="chip">Indépendante</span>
+          <span class="chip">Pop rock cinématographique</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MUSIQUE / DISCOGRAPHIE ================= -->
+<section id="music" class="reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow"><span class="num">02</span>Discographie</p>
+      <h2>Les <em>titres</em></h2>
+    </div>
+    <div class="tracks">
+      <!-- Remplace les href="#" par les liens Spotify/YouTube de chaque titre -->
+      <a class="track" href="#listen">
+        <span class="idx">01</span>
+        <span class="ttl">Evergreen<span>Pop-rock sauvage · clip officiel</span></span>
+        <span class="yr">2026</span>
+        <span class="go">Écouter →</span>
+      </a>
+      <a class="track" href="#listen">
+        <span class="idx">02</span>
+        <span class="ttl">Bain Rouge<span>Pop cinématographique</span></span>
+        <span class="yr">EP</span>
+        <span class="go">Écouter →</span>
+      </a>
+      <a class="track" href="#listen">
+        <span class="idx">03</span>
+        <span class="ttl">I AM!<span>Pop-punk · 20 000 vues YouTube</span></span>
+        <span class="yr">EP</span>
+        <span class="go">Écouter →</span>
+      </a>
+      <div class="track upcoming">
+        <span class="idx">04</span>
+        <span class="ttl">Renaissance<span>Nouveau single</span></span>
+        <span class="yr">Sept. 2026</span>
+        <span class="go">À venir</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= VIDÉOS ================= -->
+<section id="videos" class="reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow"><span class="num">03</span>En images</p>
+      <h2>Clips &amp; <em>live sessions</em></h2>
+    </div>
+    <div class="vids">
+      <a class="vid tall" href="https://youtu.be/oQS_yDBMZAU" target="_blank" rel="noopener">
+        <div class="ph" style="background:url('https://img.youtube.com/vi/oQS_yDBMZAU/hqdefault.jpg') center/cover, radial-gradient(80% 120% at 50% 0%, rgba(181,20,26,.20), #0B0B0C)"></div>
+        <span class="play"></span>
+        <span class="label"><span class="k">Evergreen</span><span class="s">Teaser · clip officiel</span></span>
+      </a>
+      <a class="vid" href="https://youtu.be/WtZPowp8_MM" target="_blank" rel="noopener">
+        <div class="ph" style="background:url('https://img.youtube.com/vi/WtZPowp8_MM/hqdefault.jpg') center/cover, radial-gradient(80% 120% at 50% 0%, rgba(181,20,26,.20), #0B0B0C)"></div>
+        <span class="play"></span>
+        <span class="label"><span class="k">Live Session</span><span class="s">Paper Street Studio · Lyon</span></span>
+      </a>
+      <a class="vid" href="https://www.youtube.com/channel/UCO5dWx7UNIUmN5-YJNAmWzg" target="_blank" rel="noopener">
+        <div class="ph" style="background:radial-gradient(80% 120% at 50% 0%, rgba(181,20,26,.20), transparent 60%), linear-gradient(135deg,#141416,#0B0B0C)"></div>
+        <span class="play"></span>
+        <span class="label"><span class="k">Renaissance</span><span class="s">Teaser · bientôt</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ÉCOUTER ================= -->
+<section id="listen" class="reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow"><span class="num">04</span>Écouter</p>
+      <h2>Sur toutes les <em>plateformes</em></h2>
+    </div>
+    <div class="platforms">
+      <!-- Renseigne les vraies URLs de tes profils -->
+      <a class="platform" href="#" target="_blank" rel="noopener"><span class="n">Spotify</span><span class="arrow">→</span></a>
+      <a class="platform" href="#" target="_blank" rel="noopener"><span class="n">Apple Music</span><span class="arrow">→</span></a>
+      <a class="platform" href="https://www.youtube.com/channel/UCO5dWx7UNIUmN5-YJNAmWzg" target="_blank" rel="noopener"><span class="n">YouTube</span><span class="arrow">→</span></a>
+      <a class="platform" href="#" target="_blank" rel="noopener"><span class="n">Deezer</span><span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TOUR ================= -->
+<section id="tour" class="reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow"><span class="num">05</span>Live</p>
+      <h2>Sur <em>scène</em></h2>
+    </div>
+    <div class="dates">
+      <!-- Ajoute ou remplace les dates ici -->
+      <div class="date-empty">
+        Aucune date annoncée pour le moment. Inscris-toi pour être prévenu·e en premier des concerts et des sorties.
+        <br><a href="#" class="btn" data-nl>Rejoindre la liste</a>
+      </div>
+      <!-- Exemple de date (décommente et duplique) :
+      <div class="date-row">
+        <span class="d">12.10.26</span>
+        <span class="v"><strong>Le Brin de Zinc</strong> — Chambéry</span>
+        <a href="#" class="go">Billets →</a>
+      </div>
+      -->
+    </div>
+  </div>
+</section>
+
+<!-- ================= MERCH ================= -->
+<section id="merch" class="reveal">
+  <div class="wrap merch">
+    <p class="eyebrow"><span class="num">06</span>Boutique</p>
+    <!-- Pointe vers ta boutique Shopify ou Bandcamp -->
+    <a href="#" target="_blank" rel="noopener">
+      <div class="big">MERCH</div>
+    </a>
+    <p>Vinyles, textile et éditions limitées. La boutique officielle ouvre bientôt — hébergée sur Bandcamp / Shopify.</p>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow"><span class="num">07</span>Contact</p>
+      <h2>Travaillons <em>ensemble</em></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="cbox">
+        <p class="role">Booking</p>
+        <a class="mail" href="mailto:booking@jude-music.com">booking@jude-music.com</a>
+        <p class="d">Concerts, festivals, programmation.</p>
+      </div>
+      <div class="cbox">
+        <p class="role">Presse</p>
+        <a class="mail" href="mailto:press@jude-music.com">press@jude-music.com</a>
+        <p class="d">Interviews, dossier de presse, photos HD.</p>
+      </div>
+      <div class="cbox">
+        <p class="role">Contact</p>
+        <a class="mail" href="mailto:contact@jude-music.com">contact@jude-music.com</a>
+        <p class="d">Toute autre demande.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NEWSLETTER (band) ================= -->
+<section id="newsletter" class="reveal">
+  <div class="wrap nl-band">
+    <p class="eyebrow">Updates</p>
+    <h2>Rejoins la <em>liste</em></h2>
+    <p>Nouvelles sorties, clips et dates de concerts — directement, avant tout le monde.</p>
+    <a href="#" class="btn blood" data-nl>S'inscrire</a>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-mark"><img src="assets/logo.png" alt="JUDE"></div>
+      <div class="socials">
+        <a href="https://www.instagram.com/jude_officialmusic/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/channel/UCO5dWx7UNIUmN5-YJNAmWzg" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr"></span> JUDE — Tous droits réservés.</span>
+      <span class="credits">Accompagnée par <span>le Brin de Zinc</span> · Soutenue par <span>Alpes Concerts</span></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= MODALE NEWSLETTER (Kit) ================= -->
+<div class="modal-overlay" id="nlModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="nlTitle">
+    <button class="modal-close" id="nlClose" aria-label="Fermer">&times;</button>
+    <h2 class="modal-mark" id="nlTitle"><img src="assets/logo.png" alt="JUDE"></h2>
+    <p class="modal-sub">Rejoins la liste — sorties, clips et dates en avant-première.</p>
+
+    <!-- Formulaire connecté à Kit (form 9560377). Le script ck.5.js gère l'envoi. -->
+    <form action="https://app.kit.com/forms/9560377/subscriptions" class="seva-form formkit-form" method="post"
+          data-sv-form="9560377" data-uid="c9478f69f7" data-format="inline" data-version="5"
+          data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Merci ! Vérifie ta boîte mail pour confirmer ton inscription.","redirect_url":""},"recaptcha":{"enabled":false}},"version":"5"}'>
+      <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+      <div data-element="fields" data-stacked="true" class="seva-fields formkit-fields">
+        <div class="formkit-field">
+          <input class="formkit-input" name="email_address" aria-label="Email" placeholder="Email*" required type="email">
+        </div>
+        <div class="formkit-field">
+          <input class="formkit-input" name="fields[first_name]" aria-label="Prénom" placeholder="Prénom" type="text">
+        </div>
+        <button data-element="submit" class="formkit-submit formkit-submit">
+          <div class="formkit-spinner"><div></div><div></div><div></div></div>
+          <span>S'inscrire</span>
+        </button>
+      </div>
+      <div class="formkit-guarantee"><p>Pas de spam. Désinscription à tout moment.</p></div>
+    </form>
+  </div>
+</div>
+
+<script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+<script>
+  // Année dynamique
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Reveal au scroll
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold:.12 });
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // ---- Modale newsletter ----
+  const modal = document.getElementById('nlModal');
+  const openNl = ()=>{ modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); };
+  const closeNl = ()=>{ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); };
+  document.querySelectorAll('[data-nl]').forEach(b=> b.addEventListener('click', e=>{ e.preventDefault(); openNl(); shown = true; }));
+  document.getElementById('nlClose').addEventListener('click', closeNl);
+  modal.addEventListener('click', e=>{ if(e.target === modal) closeNl(); });
+  document.addEventListener('keydown', e=>{ if(e.key === 'Escape') closeNl(); });
+
+  // Ouverture auto une seule fois, 12 s après l'arrivée
+  let shown = false;
+  setTimeout(()=>{ if(!shown){ shown = true; openNl(); } }, 12000);
+</script>
+
+</body>
+</html>

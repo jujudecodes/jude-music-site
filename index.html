@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -133,6 +133,13 @@ a{ color:inherit; text-decoration:none; }
 .modal .formkit-alert{ margin:0 0 12px!important; border-radius:0!important; font-size:13px!important; }
 .modal .formkit-powered-by-convertkit-container{ margin:14px 0 0!important; justify-content:flex-start!important; }
 
+html:not([data-lang="en"]) [data-l="en"]{ display:none; }
+html[data-lang="en"] [data-l="fr"]{ display:none; }
+.splash-lang{ position:fixed; top:18px; right:var(--pad); z-index:30; display:inline-flex; gap:10px; align-items:center; }
+.splash-lang button{ background:none; border:none; cursor:pointer; color:var(--ink-dim); font-family:var(--sans); font-size:12.5px; letter-spacing:.16em; text-transform:uppercase; padding:0; transition:color .25s; }
+.splash-lang button.active{ color:var(--blood); }
+.splash-lang button:hover{ color:var(--ink); }
+
 a:focus-visible,.btn:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ outline:2px solid var(--blood); outline-offset:3px; }
 
 @media (prefers-reduced-motion: reduce){ body::after{ display:none; } *{ transition:none !important; } }
@@ -142,21 +149,25 @@ a:focus-visible,.btn:focus-visible,button:focus-visible,input:focus-visible,sele
 <body>
 
 <main class="splash">
+  <div class="splash-lang">
+    <button type="button" data-setlang="fr" aria-label="Français">FR</button>
+    <button type="button" data-setlang="en" aria-label="English">EN</button>
+  </div>
   <div class="bg">
     <video autoplay muted loop playsinline preload="auto" poster="assets/evergreen-poster.jpg">
       <source src="assets/evergreen-loop.mp4" type="video/mp4">
     </video>
   </div>
   <div class="content">
-    <p class="eyebrow"><span class="b">&#9679;</span>&nbsp; New video · Out now</p>
+    <p class="eyebrow"><span class="b">&#9679;</span>&nbsp; <span data-l="fr">Nouveau clip · Disponible</span><span data-l="en">New video · Out now</span></p>
     <div class="brand"><img src="assets/logo.png" alt="JUDE"></div>
     <h1 class="feature">EVERGREEN</h1>
-    <p class="subtitle">Clip officiel. <span class="b">&mdash;</span> R&eacute;alis&eacute; par JUDE.</p>
+    <p class="subtitle"><span data-l="fr">Clip officiel. <span class="b">&mdash;</span> R&eacute;alis&eacute; par JUDE.</span><span data-l="en">Official video. <span class="b">&mdash;</span> Directed by JUDE.</span></p>
 
     <div class="actions">
-      <a class="btn blood" href="https://youtu.be/oQS_yDBMZAU" target="_blank" rel="noopener">Voir le clip</a>
-      <a class="btn" href="#" target="_blank" rel="noopener">&Eacute;couter</a>
-      <a class="btn" href="home.html">Entrer sur le site</a>
+      <a class="btn blood" href="https://youtu.be/oQS_yDBMZAU" target="_blank" rel="noopener"><span data-l="fr">Voir le teaser</span><span data-l="en">Watch the teaser</span></a>
+      <a class="btn" href="home.html"><span data-l="fr">Entrer sur le site</span><span data-l="en">Enter the site</span></a>
+      <a class="btn" href="https://ffm.bio/jude-music" target="_blank" rel="noopener"><span data-l="fr">&Eacute;couter</span><span data-l="en">Listen</span></a>
     </div>
 
     <div class="socials">
@@ -180,7 +191,7 @@ a:focus-visible,.btn:focus-visible,button:focus-visible,input:focus-visible,sele
     <div class="legal">
       <span>&copy; <span id="yr"></span> JUDE</span>
       <span>&middot;</span>
-      <span>Accompagn&eacute;e par le Brin de Zinc &middot; Soutenue par Alpes Concerts</span>
+      <span><span data-l="fr">Accompagn&eacute;e par le Brin de Zinc &middot; Soutenue par Alpes Concerts</span><span data-l="en">Supported by le Brin de Zinc &amp; Alpes Concerts</span></span>
       <span>&middot;</span>
       <a href="#" data-nl>Newsletter</a>
       <a href="mailto:contact@jude-music.com">Contact</a>
@@ -193,7 +204,7 @@ a:focus-visible,.btn:focus-visible,button:focus-visible,input:focus-visible,sele
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="nlTitle">
     <button class="modal-close" id="nlClose" aria-label="Fermer">&times;</button>
     <h2 class="modal-mark" id="nlTitle"><img src="assets/logo.png" alt="JUDE"></h2>
-    <p class="modal-sub">Rejoins la liste &mdash; sorties, clips et dates en avant-premi&egrave;re.</p>
+    <p class="modal-sub"><span data-l="fr">Rejoins la liste &mdash; sorties, clips et dates en avant-premi&egrave;re.</span><span data-l="en">Join the list &mdash; releases, videos and shows in advance.</span></p>
 
     <form action="https://app.kit.com/forms/9560377/subscriptions" class="seva-form formkit-form" method="post"
           data-sv-form="9560377" data-uid="c9478f69f7" data-format="inline" data-version="5"
@@ -211,7 +222,7 @@ a:focus-visible,.btn:focus-visible,button:focus-visible,input:focus-visible,sele
           <span>S'inscrire</span>
         </button>
       </div>
-      <div class="formkit-guarantee"><p>Pas de spam. D&eacute;sinscription &agrave; tout moment.</p></div>
+      <div class="formkit-guarantee"><p><span data-l="fr">Pas de spam. D&eacute;sinscription &agrave; tout moment.</span><span data-l="en">No spam. Unsubscribe anytime.</span></p></div>
     </form>
   </div>
 </div>
@@ -224,6 +235,15 @@ a:focus-visible,.btn:focus-visible,button:focus-visible,input:focus-visible,sele
     const v = document.querySelector('.splash .bg video');
     if (v){ v.removeAttribute('autoplay'); v.pause(); }
   }
+  // Langue FR / EN
+  const root = document.documentElement;
+  function setLang(l){
+    root.setAttribute('data-lang', l); root.setAttribute('lang', l);
+    document.querySelectorAll('[data-setlang]').forEach(b=> b.classList.toggle('active', b.dataset.setlang===l));
+  }
+  document.querySelectorAll('[data-setlang]').forEach(b=> b.addEventListener('click', ()=> setLang(b.dataset.setlang)));
+  setLang('fr');
+
   const modal = document.getElementById('nlModal');
   const openNl = ()=>{ modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); };
   const closeNl = ()=>{ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); };

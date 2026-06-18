@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -422,6 +422,22 @@ footer{ padding:clamp(48px,7vw,80px) 0 40px; border-top:1px solid var(--line); }
 .modal .formkit-alert{ margin:0 0 12px!important; border-radius:0!important; font-size:13px!important; }
 .modal .formkit-powered-by-convertkit-container{ margin:14px 0 0!important; justify-content:flex-start!important; }
 
+/* ====================================================
+   LANGUE (FR / EN)
+   ==================================================== */
+html:not([data-lang="en"]) [data-l="en"]{ display:none; }
+html[data-lang="en"] [data-l="fr"]{ display:none; }
+.lang-switch{ display:inline-flex; gap:10px; align-items:center; }
+.lang-switch button{ background:none; border:none; cursor:pointer; color:var(--ink-dim); font-family:var(--sans); font-size:12.5px; letter-spacing:.16em; text-transform:uppercase; padding:0; transition:color .25s; }
+.lang-switch button.active{ color:var(--blood); }
+.lang-switch button:hover{ color:var(--ink); }
+
+/* ====================================================
+   BANDSINTOWN (En concert)
+   ==================================================== */
+.bit-wrap{ border-top:1px solid var(--line); padding-top:8px; min-height:160px; }
+.bit-wrap .bit-widget{ font-family:var(--sans); }
+
 a:focus-visible, .btn:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible{ outline:2px solid var(--blood); outline-offset:3px; }
 </style>
 </head>
@@ -432,23 +448,26 @@ a:focus-visible, .btn:focus-visible, button:focus-visible, input:focus-visible, 
 <header class="nav">
   <a href="#top" class="mark"><img src="assets/logo.png" alt="JUDE"></a>
   <nav>
-    <a href="#bio">À propos</a>
-    <a href="#music">Musique</a>
-    <a href="#listen">Écouter</a>
+    <a href="#bio"><span data-l="fr">À propos</span><span data-l="en">About</span></a>
+    <a href="#music"><span data-l="fr">Musique</span><span data-l="en">Music</span></a>
+    <a href="#listen"><span data-l="fr">Écouter</span><span data-l="en">Listen</span></a>
     <a href="#" data-nl>Newsletter</a>
     <a href="#contact">Booking</a>
   </nav>
+  <span class="lang-switch">
+    <button type="button" data-setlang="fr" aria-label="Français">FR</button>
+    <button type="button" data-setlang="en" aria-label="English">EN</button>
+  </span>
 </header>
 
 <!-- ================= HERO ================= -->
 <section class="hero" id="top">
   <div class="bg"></div>
   <div class="wrap">
-    <p class="eyebrow">Autrice · Compositrice · Réalisatrice</p>
+    <p class="eyebrow"><span data-l="fr">Autrice · Compositrice · Réalisatrice</span><span data-l="en">Songwriter · Composer · Filmmaker</span></p>
     <h1 class="wordmark"><img src="assets/logo.png" alt="JUDE"></h1>
-    <p class="tag">Pop rock cinématographique. <span class="sep">—</span> Même sang, nouvelle peau.</p>
     <div class="cta-row">
-      <a href="#listen" class="btn blood">Écouter</a>
+      <a href="https://ffm.bio/jude-music" target="_blank" rel="noopener" class="btn blood"><span data-l="fr">Écouter</span><span data-l="en">Listen</span></a>
       <a href="#contact" class="btn">Booking</a>
     </div>
   </div>
@@ -459,19 +478,25 @@ a:focus-visible, .btn:focus-visible, button:focus-visible, input:focus-visible, 
 <section id="bio" class="reveal">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow"><span class="num">01</span>À propos</p>
-      <h2>Femme fatale <em>décalée</em></h2>
+      <p class="eyebrow"><span class="num">01</span><span data-l="fr">À propos</span><span data-l="en">About</span></p>
+      <h2><span data-l="fr">Femme Fatale — <em>audacieuse &amp; vulnérable</em></span><span data-l="en">Femme Fatale — <em>bold &amp; vulnerable</em></span></h2>
     </div>
     <div class="bio-grid">
-      <p class="bio-lead">Quelque part entre <em>Lady Gaga</em> et <em>girl in red</em> — film noir, rouge sang, humour acéré.</p>
+      <p class="bio-lead"><span data-l="fr">Quelque part entre <em>Selah Sue</em> et <em>Lola Young</em>.</span><span data-l="en">Somewhere between <em>Selah Sue</em> and <em>Lola Young</em>.</span></p>
       <div class="bio-body">
-        <p>JUDE est une artiste solo originaire de <strong>Savoie</strong>. Chanteuse, guitariste, autrice-compositrice, productrice et réalisatrice, elle construit son projet de façon entièrement indépendante depuis plusieurs années — d'abord sous le nom de scène Jude's Ketchup, puis sous son prénom seul, <strong>JUDE</strong>, à partir de 2026, marquant le début d'une nouvelle ère artistique plus affirmée.</p>
-        <p>Sa musique est une pop rock émotionnelle en anglais, portée par une voix centrale puissante et des productions organiques aux textures soignées. Son univers visuel et sonore s'articule autour d'une esthétique cinématographique assumée — femme fatale à l'humour acéré, audacieuse, libre, bruyante quand il le faut.</p>
-        <p>Son premier EP explore plusieurs directions — pop-punk avec <strong>I AM!</strong>, pop cinématographique avec <strong>Bain Rouge</strong>, pop-rock sauvage avec <strong>Evergreen</strong> — posant les bases d'une identité claire : une pop accessible en surface, dense et personnelle en profondeur.</p>
+        <div data-l="fr">
+          <p>JUDE est une artiste complète : chanteuse, guitariste, autrice-compositrice et réalisatrice de films. Elle construit son univers par les mots comme par les images. Sa musique puise dans le rock et la soul britanniques, mais aussi dans ses origines marocaines. Portée par une voix à la fois vulnérable et puissante, elle assume une esthétique cinématographique — femme fatale, audacieuse et libre, mais honnête quand il le faut.</p>
+          <p>Son premier EP revisite les contes de Grimm (le Petit Chaperon rouge, la sirène sur son rocher) en les remettant au goût du jour, à travers les problématiques que vivent les femmes aujourd'hui. Un EP aux couleurs multiples : pop cinématographique avec <strong>Bain Rouge</strong>, dance-rock sauvage avec <strong>Evergreen</strong>. Il pose les bases d'une identité claire : une pop rock accessible en surface, dense et personnelle en profondeur.</p>
+        </div>
+        <div data-l="en">
+          <p>JUDE is a multifaceted artist: singer, guitarist, songwriter, and filmmaker. She builds her world through words as well as images. Her music draws on British rock and soul, as well as her Moroccan heritage. With a voice that is both vulnerable and powerful, she embraces a cinematic aesthetic — a femme fatale, bold and free, yet honest when it counts.</p>
+          <p>Her debut EP reimagines Grimm's fairy tales (Little Red Riding Hood, The Mermaid on Her Rock), updating them to reflect the challenges women face today. It's a multifaceted EP: cinematic pop with <strong>Bain Rouge</strong>, wild dance-rock with <strong>Evergreen</strong>. It lays the groundwork for a distinct identity: pop-rock that's accessible on the surface, yet rich and personal at its core.</p>
+        </div>
         <div class="bio-meta">
           <span class="chip">Savoie · France</span>
-          <span class="chip">Indépendante</span>
-          <span class="chip">Pop rock cinématographique</span>
+          <span class="chip">Queer</span>
+          <span class="chip"><span data-l="fr">Lead féminin</span><span data-l="en">Female-fronted</span></span>
+          <span class="chip"><span data-l="fr">Pop rock alternative</span><span data-l="en">Alternative pop rock</span></span>
         </div>
       </div>
     </div>
@@ -482,35 +507,28 @@ a:focus-visible, .btn:focus-visible, button:focus-visible, input:focus-visible, 
 <section id="music" class="reveal">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow"><span class="num">02</span>Discographie</p>
-      <h2>Les <em>titres</em></h2>
+      <p class="eyebrow"><span class="num">02</span><span data-l="fr">Discographie</span><span data-l="en">Discography</span></p>
+      <h2><span data-l="fr">Les <em>titres</em></span><span data-l="en">The <em>tracks</em></span></h2>
     </div>
     <div class="tracks">
-      <!-- Remplace les href="#" par les liens Spotify/YouTube de chaque titre -->
-      <a class="track" href="#listen">
+      <a class="track" href="https://www.youtube.com/watch?v=v_QbuBtVP8I" target="_blank" rel="noopener">
         <span class="idx">01</span>
-        <span class="ttl">Evergreen<span>Pop-rock sauvage · clip officiel</span></span>
+        <span class="ttl">Evergreen<span><span data-l="fr">Dance-rock · clip officiel</span><span data-l="en">Dance-rock · official video</span></span></span>
         <span class="yr">2026</span>
-        <span class="go">Écouter →</span>
+        <span class="go"><span data-l="fr">Écouter →</span><span data-l="en">Listen →</span></span>
       </a>
-      <a class="track" href="#listen">
+      <a class="track" href="https://www.youtube.com/watch?v=HY_Pc1MpKtY" target="_blank" rel="noopener">
         <span class="idx">02</span>
-        <span class="ttl">Bain Rouge<span>Pop cinématographique</span></span>
+        <span class="ttl">Bain Rouge<span><span data-l="fr">Pop cinématographique</span><span data-l="en">Cinematic pop</span></span></span>
         <span class="yr">EP</span>
-        <span class="go">Écouter →</span>
+        <span class="go"><span data-l="fr">Écouter →</span><span data-l="en">Listen →</span></span>
       </a>
-      <a class="track" href="#listen">
+      <a class="track" href="https://www.youtube.com/watch?v=ArP71Qkisj4" target="_blank" rel="noopener">
         <span class="idx">03</span>
-        <span class="ttl">I AM!<span>Pop-punk · 20 000 vues YouTube</span></span>
+        <span class="ttl">I AM!<span>Pop-punk</span></span>
         <span class="yr">EP</span>
-        <span class="go">Écouter →</span>
+        <span class="go"><span data-l="fr">Écouter →</span><span data-l="en">Listen →</span></span>
       </a>
-      <div class="track upcoming">
-        <span class="idx">04</span>
-        <span class="ttl">Renaissance<span>Nouveau single</span></span>
-        <span class="yr">Sept. 2026</span>
-        <span class="go">À venir</span>
-      </div>
     </div>
   </div>
 </section>
@@ -519,24 +537,24 @@ a:focus-visible, .btn:focus-visible, button:focus-visible, input:focus-visible, 
 <section id="videos" class="reveal">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow"><span class="num">03</span>En images</p>
-      <h2>Clips &amp; <em>live sessions</em></h2>
+      <p class="eyebrow"><span class="num">03</span><span data-l="fr">En images</span><span data-l="en">In motion</span></p>
+      <h2><span data-l="fr">Clips &amp; <em>live sessions</em></span><span data-l="en">Videos &amp; <em>live sessions</em></span></h2>
     </div>
     <div class="vids">
       <a class="vid tall" href="https://youtu.be/oQS_yDBMZAU" target="_blank" rel="noopener">
         <div class="ph" style="background:url('https://img.youtube.com/vi/oQS_yDBMZAU/hqdefault.jpg') center/cover, radial-gradient(80% 120% at 50% 0%, rgba(181,20,26,.20), #0B0B0C)"></div>
         <span class="play"></span>
-        <span class="label"><span class="k">Evergreen</span><span class="s">Teaser · clip officiel</span></span>
+        <span class="label"><span class="k">Evergreen</span><span class="s"><span data-l="fr">Teaser · clip officiel</span><span data-l="en">Teaser · official video</span></span></span>
       </a>
-      <a class="vid" href="https://youtu.be/WtZPowp8_MM" target="_blank" rel="noopener">
-        <div class="ph" style="background:url('https://img.youtube.com/vi/WtZPowp8_MM/hqdefault.jpg') center/cover, radial-gradient(80% 120% at 50% 0%, rgba(181,20,26,.20), #0B0B0C)"></div>
+      <a class="vid" href="https://youtu.be/Yu19IP3txPg" target="_blank" rel="noopener">
+        <div class="ph" style="background:url('https://img.youtube.com/vi/Yu19IP3txPg/hqdefault.jpg') center/cover, radial-gradient(80% 120% at 50% 0%, rgba(181,20,26,.20), #0B0B0C)"></div>
         <span class="play"></span>
         <span class="label"><span class="k">Live Session</span><span class="s">Paper Street Studio · Lyon</span></span>
       </a>
-      <a class="vid" href="https://www.youtube.com/channel/UCO5dWx7UNIUmN5-YJNAmWzg" target="_blank" rel="noopener">
-        <div class="ph" style="background:radial-gradient(80% 120% at 50% 0%, rgba(181,20,26,.20), transparent 60%), linear-gradient(135deg,#141416,#0B0B0C)"></div>
+      <a class="vid" href="https://youtu.be/UcKzgIFRE2Y" target="_blank" rel="noopener">
+        <div class="ph" style="background:url('https://img.youtube.com/vi/UcKzgIFRE2Y/hqdefault.jpg') center/cover, radial-gradient(80% 120% at 50% 0%, rgba(181,20,26,.20), #0B0B0C)"></div>
         <span class="play"></span>
-        <span class="label"><span class="k">Renaissance</span><span class="s">Teaser · bientôt</span></span>
+        <span class="label"><span class="k">Live Session Solo</span><span class="s">Solo</span></span>
       </a>
     </div>
   </div>
@@ -546,39 +564,43 @@ a:focus-visible, .btn:focus-visible, button:focus-visible, input:focus-visible, 
 <section id="listen" class="reveal">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow"><span class="num">04</span>Écouter</p>
-      <h2>Sur toutes les <em>plateformes</em></h2>
+      <p class="eyebrow"><span class="num">04</span><span data-l="fr">Écouter</span><span data-l="en">Listen</span></p>
+      <h2><span data-l="fr">Sur toutes les <em>plateformes</em></span><span data-l="en">On every <em>platform</em></span></h2>
     </div>
     <div class="platforms">
-      <!-- Renseigne les vraies URLs de tes profils -->
-      <a class="platform" href="#" target="_blank" rel="noopener"><span class="n">Spotify</span><span class="arrow">→</span></a>
-      <a class="platform" href="#" target="_blank" rel="noopener"><span class="n">Apple Music</span><span class="arrow">→</span></a>
+      <a class="platform" href="https://ffm.bio/jude-music" target="_blank" rel="noopener"><span class="n">Spotify</span><span class="arrow">→</span></a>
+      <a class="platform" href="https://ffm.bio/jude-music" target="_blank" rel="noopener"><span class="n">Apple Music</span><span class="arrow">→</span></a>
       <a class="platform" href="https://www.youtube.com/channel/UCO5dWx7UNIUmN5-YJNAmWzg" target="_blank" rel="noopener"><span class="n">YouTube</span><span class="arrow">→</span></a>
-      <a class="platform" href="#" target="_blank" rel="noopener"><span class="n">Deezer</span><span class="arrow">→</span></a>
+      <a class="platform" href="https://ffm.bio/jude-music" target="_blank" rel="noopener"><span class="n">Deezer</span><span class="arrow">→</span></a>
     </div>
   </div>
 </section>
 
-<!-- ================= TOUR ================= -->
+<!-- ================= EN CONCERT (Bandsintown) ================= -->
 <section id="tour" class="reveal">
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow"><span class="num">05</span>Live</p>
-      <h2>Sur <em>scène</em></h2>
+      <h2><span data-l="fr">En <em>concert</em></span><span data-l="en">Live <em>shows</em></span></h2>
     </div>
-    <div class="dates">
-      <!-- Ajoute ou remplace les dates ici -->
-      <div class="date-empty">
-        Aucune date annoncée pour le moment. Inscris-toi pour être prévenu·e en premier des concerts et des sorties.
-        <br><a href="#" class="btn" data-nl>Rejoindre la liste</a>
-      </div>
-      <!-- Exemple de date (décommente et duplique) :
-      <div class="date-row">
-        <span class="d">12.10.26</span>
-        <span class="v"><strong>Le Brin de Zinc</strong> — Chambéry</span>
-        <a href="#" class="go">Billets →</a>
-      </div>
-      -->
+    <div class="bit-wrap">
+      <!-- Les dates se synchronisent automatiquement depuis ton compte Bandsintown (artiste 15607522).
+           Ajoute/modifie tes concerts sur bandsintown.com et ils apparaissent ici tout seuls. -->
+      <a class="bit-widget-initializer"
+         data-artist-name="id_15607522"
+         data-display-limit="15"
+         data-display-past-dates="false"
+         data-display-local-dates="false"
+         data-display-play-my-city="false"
+         data-display-lineup="false"
+         data-auto-style="false"
+         data-text-color="rgba(236,230,219,1)"
+         data-link-color="rgba(181,20,26,1)"
+         data-background-color="rgba(0,0,0,0)"
+         data-separator-color="rgba(236,230,219,0.12)"
+         data-display-limit-button-color="rgba(181,20,26,1)"
+         data-font="Inter"></a>
+      <script charset="utf-8" src="https://widgetv3.bandsintown.com/main.min.js"></script>
     </div>
   </div>
 </section>
@@ -586,12 +608,11 @@ a:focus-visible, .btn:focus-visible, button:focus-visible, input:focus-visible, 
 <!-- ================= MERCH ================= -->
 <section id="merch" class="reveal">
   <div class="wrap merch">
-    <p class="eyebrow"><span class="num">06</span>Boutique</p>
-    <!-- Pointe vers ta boutique Shopify ou Bandcamp -->
-    <a href="#" target="_blank" rel="noopener">
+    <p class="eyebrow"><span class="num">06</span><span data-l="fr">Boutique</span><span data-l="en">Store</span></p>
+    <a href="https://judeofficialmusic.bandcamp.com/" target="_blank" rel="noopener">
       <div class="big">MERCH</div>
     </a>
-    <p>Vinyles, textile et éditions limitées. La boutique officielle ouvre bientôt — hébergée sur Bandcamp / Shopify.</p>
+    <p><span data-l="fr">Musique, vinyles et éditions limitées sur Bandcamp.</span><span data-l="en">Music, vinyl and limited editions on Bandcamp.</span></p>
   </div>
 </section>
 
@@ -600,23 +621,23 @@ a:focus-visible, .btn:focus-visible, button:focus-visible, input:focus-visible, 
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow"><span class="num">07</span>Contact</p>
-      <h2>Travaillons <em>ensemble</em></h2>
+      <h2>Contact</h2>
     </div>
     <div class="contact-grid">
       <div class="cbox">
         <p class="role">Booking</p>
         <a class="mail" href="mailto:booking@jude-music.com">booking@jude-music.com</a>
-        <p class="d">Concerts, festivals, programmation.</p>
+        <p class="d"><span data-l="fr">Concerts, festivals, programmation.</span><span data-l="en">Shows, festivals, bookings.</span></p>
       </div>
       <div class="cbox">
-        <p class="role">Presse</p>
+        <p class="role"><span data-l="fr">Presse</span><span data-l="en">Press</span></p>
         <a class="mail" href="mailto:press@jude-music.com">press@jude-music.com</a>
-        <p class="d">Interviews, dossier de presse, photos HD.</p>
+        <p class="d"><span data-l="fr">Interviews, dossier de presse, photos HD.</span><span data-l="en">Interviews, press kit, HD photos.</span></p>
       </div>
       <div class="cbox">
         <p class="role">Contact</p>
         <a class="mail" href="mailto:contact@jude-music.com">contact@jude-music.com</a>
-        <p class="d">Toute autre demande.</p>
+        <p class="d"><span data-l="fr">Toute autre demande.</span><span data-l="en">Any other request.</span></p>
       </div>
     </div>
   </div>
@@ -625,10 +646,10 @@ a:focus-visible, .btn:focus-visible, button:focus-visible, input:focus-visible, 
 <!-- ================= NEWSLETTER (band) ================= -->
 <section id="newsletter" class="reveal">
   <div class="wrap nl-band">
-    <p class="eyebrow">Updates</p>
-    <h2>Rejoins la <em>liste</em></h2>
-    <p>Nouvelles sorties, clips et dates de concerts — directement, avant tout le monde.</p>
-    <a href="#" class="btn blood" data-nl>S'inscrire</a>
+    <p class="eyebrow">Newsletter</p>
+    <h2><span data-l="fr">Rejoins la <em>liste</em></span><span data-l="en">Join the <em>list</em></span></h2>
+    <p><span data-l="fr">Nouvelles sorties, clips et dates de concerts — directement, avant tout le monde.</span><span data-l="en">New releases, videos and shows — straight to you, before anyone else.</span></p>
+    <a href="#" class="btn blood" data-nl><span data-l="fr">S'inscrire</span><span data-l="en">Sign up</span></a>
   </div>
 </section>
 
@@ -643,8 +664,8 @@ a:focus-visible, .btn:focus-visible, button:focus-visible, input:focus-visible, 
       </div>
     </div>
     <div class="foot-bottom">
-      <span>© <span id="yr"></span> JUDE — Tous droits réservés.</span>
-      <span class="credits">Accompagnée par <span>le Brin de Zinc</span> · Soutenue par <span>Alpes Concerts</span></span>
+      <span>© <span id="yr"></span> JUDE — <span data-l="fr">Tous droits réservés.</span><span data-l="en">All rights reserved.</span></span>
+      <span class="credits"><span data-l="fr">Accompagnée par <span>le Brin de Zinc</span> · Soutenue par <span>Alpes Concerts</span></span><span data-l="en">Supported by <span>le Brin de Zinc</span> &amp; <span>Alpes Concerts</span></span></span>
     </div>
   </div>
 </footer>
@@ -654,9 +675,8 @@ a:focus-visible, .btn:focus-visible, button:focus-visible, input:focus-visible, 
   <div class="modal" role="dialog" aria-modal="true" aria-labelledby="nlTitle">
     <button class="modal-close" id="nlClose" aria-label="Fermer">&times;</button>
     <h2 class="modal-mark" id="nlTitle"><img src="assets/logo.png" alt="JUDE"></h2>
-    <p class="modal-sub">Rejoins la liste — sorties, clips et dates en avant-première.</p>
+    <p class="modal-sub"><span data-l="fr">Rejoins la liste — sorties, clips et dates en avant-première.</span><span data-l="en">Join the list — releases, videos and shows in advance.</span></p>
 
-    <!-- Formulaire connecté à Kit (form 9560377). Le script ck.5.js gère l'envoi. -->
     <form action="https://app.kit.com/forms/9560377/subscriptions" class="seva-form formkit-form" method="post"
           data-sv-form="9560377" data-uid="c9478f69f7" data-format="inline" data-version="5"
           data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Merci ! Vérifie ta boîte mail pour confirmer ton inscription.","redirect_url":""},"recaptcha":{"enabled":false}},"version":"5"}'>
@@ -673,17 +693,29 @@ a:focus-visible, .btn:focus-visible, button:focus-visible, input:focus-visible, 
           <span>S'inscrire</span>
         </button>
       </div>
-      <div class="formkit-guarantee"><p>Pas de spam. Désinscription à tout moment.</p></div>
+      <div class="formkit-guarantee"><p><span data-l="fr">Pas de spam. Désinscription à tout moment.</span><span data-l="en">No spam. Unsubscribe anytime.</span></p></div>
     </form>
   </div>
 </div>
 
 <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
 <script>
-  // Année dynamique
   document.getElementById('yr').textContent = new Date().getFullYear();
 
-  // Reveal au scroll
+  // ---- Langue FR / EN ----
+  const root = document.documentElement;
+  function setLang(l){
+    root.setAttribute('data-lang', l);
+    root.setAttribute('lang', l);
+    document.title = (l==='en')
+      ? 'JUDE | Official Music Artist — Alternative Pop Rock'
+      : 'JUDE | Artiste officielle — Pop rock alternative';
+    document.querySelectorAll('[data-setlang]').forEach(b=> b.classList.toggle('active', b.dataset.setlang===l));
+  }
+  document.querySelectorAll('[data-setlang]').forEach(b=> b.addEventListener('click', ()=> setLang(b.dataset.setlang)));
+  setLang('fr');
+
+  // ---- Reveal au scroll ----
   const io = new IntersectionObserver((entries)=>{
     entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, { threshold:.12 });
@@ -691,15 +723,13 @@ a:focus-visible, .btn:focus-visible, button:focus-visible, input:focus-visible, 
 
   // ---- Modale newsletter ----
   const modal = document.getElementById('nlModal');
+  let shown = false;
   const openNl = ()=>{ modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); };
   const closeNl = ()=>{ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); };
-  document.querySelectorAll('[data-nl]').forEach(b=> b.addEventListener('click', e=>{ e.preventDefault(); openNl(); shown = true; }));
+  document.querySelectorAll('[data-nl]').forEach(b=> b.addEventListener('click', e=>{ e.preventDefault(); shown=true; openNl(); }));
   document.getElementById('nlClose').addEventListener('click', closeNl);
   modal.addEventListener('click', e=>{ if(e.target === modal) closeNl(); });
   document.addEventListener('keydown', e=>{ if(e.key === 'Escape') closeNl(); });
-
-  // Ouverture auto une seule fois, 12 s après l'arrivée
-  let shown = false;
   setTimeout(()=>{ if(!shown){ shown = true; openNl(); } }, 12000);
 </script>
 

@@ -26,6 +26,16 @@ de succès ne te convient pas, on pourra ajuster.
 (Le champ « Pays » n'a pas été inclus car il n'existe pas par défaut dans Kit ; on peut l'ajouter
 en créant un *custom field* `country` côté Kit.)
 
+## Bilingue FR / EN
+Le site est entièrement bilingue : bouton FR / EN en haut à droite (sur les 2 pages).
+
+## Liens branchés ✅
+- Écouter / smart-link : https://ffm.bio/jude-music
+- Discographie : Evergreen, Bain Rouge, I AM! → leurs clips YouTube
+- Vidéos : teaser Evergreen, Live Session Paper Street, Live Session Solo
+- Boutique : https://judeofficialmusic.bandcamp.com/
+- Concerts : widget Bandsintown (artiste 15607522) — à vérifier une fois en ligne
+
 ## Ce qu'il reste à brancher (liens)
 Cherche les `href="#"` :
 - **Écouter** (écran d'entrée + section Écouter) : smart-link et profils Spotify / Apple / Deezer.

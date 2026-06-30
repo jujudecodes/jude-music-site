@@ -231,6 +231,10 @@ header.nav{
   font-size:clamp(24px,3.4vw,40px); line-height:1.22; letter-spacing:-.01em;
 }
 .bio-lead em{ font-style:italic; color:var(--blood); }
+.section-sub{ font-family:var(--display); font-style:italic; font-weight:300; font-size:clamp(18px,2.4vw,26px); color:var(--ink-dim); margin-top:.55em; max-width:36ch; }
+.bio-photo{ margin:34px 0 0; }
+.bio-photo img{ width:100%; height:auto; display:block; border:1px solid var(--line); }
+.bio-photo figcaption{ font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint); margin-top:10px; }
 .bio-body p{ color:var(--ink-dim); margin-bottom:1.1em; max-width:60ch; }
 .bio-body p strong{ color:var(--ink); font-weight:500; }
 .bio-meta{ margin-top:26px; display:flex; flex-wrap:wrap; gap:10px; }
@@ -479,21 +483,28 @@ a:focus-visible, .btn:focus-visible, button:focus-visible, input:focus-visible, 
   <div class="wrap">
     <div class="section-head">
       <p class="eyebrow"><span class="num">01</span><span data-l="fr">À propos</span><span data-l="en">About</span></p>
-      <h2><span data-l="fr">Femme Fatale — <em>audacieuse &amp; vulnérable</em></span><span data-l="en">Femme Fatale — <em>bold &amp; vulnerable</em></span></h2>
+      <h2><span data-l="fr">Audacieuse &amp; <em>sensible</em></span><span data-l="en">Bold &amp; <em>sensitive</em></span></h2>
+      <p class="section-sub"><span data-l="fr">Une artiste qui n'a pas peur de parler de nos vulnérabilités.</span><span data-l="en">An artist unafraid to speak about our vulnerabilities.</span></p>
     </div>
     <div class="bio-grid">
-      <p class="bio-lead"><span data-l="fr">Quelque part entre <em>Selah Sue</em> et <em>Lola Young</em>.</span><span data-l="en">Somewhere between <em>Selah Sue</em> and <em>Lola Young</em>.</span></p>
+      <div class="bio-aside">
+        <p class="bio-lead"><span data-l="fr">Quelque part entre <em>Selah Sue</em> et <em>Hayley Williams</em>.</span><span data-l="en">Somewhere between <em>Selah Sue</em> and <em>Hayley Williams</em>.</span></p>
+        <figure class="bio-photo">
+          <img src="assets/about.jpg" alt="JUDE" loading="lazy">
+          <figcaption>© Philomène Piquet-Gauthier</figcaption>
+        </figure>
+      </div>
       <div class="bio-body">
         <div data-l="fr">
-          <p>JUDE est une artiste complète : chanteuse, guitariste, autrice-compositrice et réalisatrice de films. Elle construit son univers par les mots comme par les images. Sa musique puise dans le rock et la soul britanniques, mais aussi dans ses origines marocaines. Portée par une voix à la fois vulnérable et puissante, elle assume une esthétique cinématographique — femme fatale, audacieuse et libre, mais honnête quand il le faut.</p>
-          <p>Son premier EP revisite les contes de Grimm (le Petit Chaperon rouge, la sirène sur son rocher) en les remettant au goût du jour, à travers les problématiques que vivent les femmes aujourd'hui. Un EP aux couleurs multiples : pop cinématographique avec <strong>Bain Rouge</strong>, dance-rock sauvage avec <strong>Evergreen</strong>. Il pose les bases d'une identité claire : une pop rock accessible en surface, dense et personnelle en profondeur.</p>
+          <p>JUDE est une artiste complète : chanteuse, guitariste, autrice-compositrice et réalisatrice de films. Elle construit son univers par les mots comme par les images. Sa musique puise dans le rock et la soul britanniques, mais aussi dans ses origines marocaines. Portée par une voix à la fois vulnérable et puissante, elle assume une esthétique cinématographique — audacieuse et libre, mais honnête quand il le faut.</p>
+          <p>Son premier EP revisite les contes de Grimm (le Petit Chaperon rouge, la Sirène sur son rocher) en les remettant au goût du jour, à travers les problématiques que vivent les femmes aujourd'hui. Un EP aux couleurs multiples : pop cinématographique avec <strong>Bain Rouge</strong>, dance-rock sauvage avec <strong>Evergreen</strong>. Il pose les bases d'une identité claire : une pop rock accessible en surface, dense et personnelle en profondeur.</p>
         </div>
         <div data-l="en">
-          <p>JUDE is a multifaceted artist: singer, guitarist, songwriter, and filmmaker. She builds her world through words as well as images. Her music draws on British rock and soul, as well as her Moroccan heritage. With a voice that is both vulnerable and powerful, she embraces a cinematic aesthetic — a femme fatale, bold and free, yet honest when it counts.</p>
+          <p>JUDE is a multifaceted artist: singer, guitarist, songwriter, and filmmaker. She builds her world through words as well as images. Her music draws on British rock and soul, as well as her Moroccan heritage. With a voice that is both vulnerable and powerful, she embraces a cinematic aesthetic — bold and free, yet honest when it counts.</p>
           <p>Her debut EP reimagines Grimm's fairy tales (Little Red Riding Hood, The Mermaid on Her Rock), updating them to reflect the challenges women face today. It's a multifaceted EP: cinematic pop with <strong>Bain Rouge</strong>, wild dance-rock with <strong>Evergreen</strong>. It lays the groundwork for a distinct identity: pop-rock that's accessible on the surface, yet rich and personal at its core.</p>
         </div>
         <div class="bio-meta">
-          <span class="chip">Savoie · France</span>
+          <span class="chip">Rhône-Alpes · France</span>
           <span class="chip">Queer</span>
           <span class="chip"><span data-l="fr">Lead féminin</span><span data-l="en">Female-fronted</span></span>
           <span class="chip"><span data-l="fr">Pop rock alternative</span><span data-l="en">Alternative pop rock</span></span>
@@ -568,10 +579,9 @@ a:focus-visible, .btn:focus-visible, button:focus-visible, input:focus-visible, 
       <h2><span data-l="fr">Sur toutes les <em>plateformes</em></span><span data-l="en">On every <em>platform</em></span></h2>
     </div>
     <div class="platforms">
-      <a class="platform" href="https://ffm.bio/jude-music" target="_blank" rel="noopener"><span class="n">Spotify</span><span class="arrow">→</span></a>
-      <a class="platform" href="https://ffm.bio/jude-music" target="_blank" rel="noopener"><span class="n">Apple Music</span><span class="arrow">→</span></a>
-      <a class="platform" href="https://www.youtube.com/channel/UCO5dWx7UNIUmN5-YJNAmWzg" target="_blank" rel="noopener"><span class="n">YouTube</span><span class="arrow">→</span></a>
-      <a class="platform" href="https://ffm.bio/jude-music" target="_blank" rel="noopener"><span class="n">Deezer</span><span class="arrow">→</span></a>
+      <a class="platform" href="https://open.spotify.com/intl-fr/artist/3lqzzzjfl2W4547YA22dJp" target="_blank" rel="noopener"><span class="n">Spotify</span><span class="arrow">→</span></a>
+      <a class="platform" href="https://music.apple.com/fr/artist/jude/6780821562" target="_blank" rel="noopener"><span class="n">Apple Music</span><span class="arrow">→</span></a>
+      <a class="platform" href="https://music.youtube.com/playlist?list=OLAK5uy_k6_YuT44YFjRK2TD3GjP_XILyuZNakyt4" target="_blank" rel="noopener"><span class="n">YouTube Music</span><span class="arrow">→</span></a>
     </div>
   </div>
 </section>
